@@ -1,3 +1,5 @@
+const validacionn= require('../middlewares/formValidar')
+
 const controller={
     formulario:(req,res)=>{
         res.render('formulario')

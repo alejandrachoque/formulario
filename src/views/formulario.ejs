@@ -11,25 +11,26 @@
         <label for="nombre">Ingrese su nombre </label>
         <input type="text" id="nombre" name="nombre" >
         <% if(locals.errors && errors.nombre){%>
-            <div> <%= errors.nombre.msg %></div>
+            <div style="color: crimson;"> <%= errors.nombre.msg %></div>
         <% } %>
         <label for="color">Color favorito</label>
-            <select name="color" required>
-                <option value="verde" >Verde</option>
+            <select name="color" >
+                
+                <option value="verde"  >Verde</option>
                 <option value="azul">Azul</option>
-                <option value="rosa">Rosa</option>
-                <option value="amarillo">Amarillo</option>
+                <option value="rosa"  >Rosa</option>
+                <option value="amarillo" >Amarillo</option>
 
             </select>
         <label for="email">Ingrese su email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" >
         <% if(locals.errors && errors.email){%>
-            <div> <%= errors.email.msg %></div>
+            <div style="color: crimson;"> <%= errors.email.msg %></div>
         <% } %>
         <label for="edad">Ingrese su edad</label>
         <input type="text" id="edad" name="edad">
         <% if(locals.errors && errors.edad){%>
-            <div> <%= errors.edad.msg %></div>
+            <div style="color: crimson;"> <%= errors.edad.msg %></div>
         <% } %>
         <button type="submit">Enviar</button>
         
