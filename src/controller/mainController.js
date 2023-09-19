@@ -8,6 +8,7 @@ const controller={
 const {nombre,color,email,edad}= req.body
 const{ validationResult}=require('express-validator')
 const errors= validationResult(req)
+
  if(errors.isEmpty()){
      res.send('Hola '+ nombre+ ', elegiste el color: '+ color+ ', tu email es: '+ email+ ' y tu edad es: '+ edad)
        
@@ -19,6 +20,17 @@ const errors= validationResult(req)
  }
 
  
+    },
+    color:(req,res)=>{
+        
+        const{color}=req.body
+        req.session.color= color
+    if(req.session.color){
+        res.send(color)
+    }else{
+        
+    }
+
     }
 }
 
